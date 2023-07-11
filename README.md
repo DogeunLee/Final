@@ -3,7 +3,7 @@
 
 <p align="center"><img src="/img/kgv2.png" /></p>
 
-## Team Channel KGV WEB
+## ✨ Team Channel KGV WEB
   KH정보교육원 자바개발 A10 3조 Team Channel_KGV<br>
   조장 - [김민수](https://github.com/MSKY219), 팀원 - 이도근, [김윤석](https://github.com/rjrjsktl), [권지훈](https://github.com/last-child), [최영탁](https://github.com/cyoungt), [정지민](https://github.com/0sori)
   <br>개발기간 : 2023.05.15 ~ 2023.07.10
@@ -13,14 +13,14 @@
  [ gitHub / 깃허브 주소 ](https://github.com/MSKY219/FINAL_PROJECT)
 
 
-## KGV소개
+## ✨ KGV소개
 
  국비지원 파이널 프로젝트로 영화관 예매 사이트를 제작하였습니다.<br>
  영화예매와, 영화리뷰, 마이페이지와<br> 고객센터를 통한 1:1 소통이 가능하도록 제작하였습니다.
  - HTML, CSS, JS와 Java, oracle 기반으로 제작하였으며 AWS EC2, RD5 를 적용하였습니다.
  - 보안을 위하여 xss, HTTPS를 적용하였으며 강제적 접근을 막기 위한 기능을 추가하였습니다.
 
-## 사용기술 및개발환경 
+## ✨ 사용기술 및개발환경 
 
  프론트엔드<br>
   <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">    <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">   <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
@@ -40,7 +40,7 @@
 Collaboration<br>
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
 
-## 본인이 참여한 주요 기능
+## ✨ 본인이 참여한 주요 기능
 <h3>1. 전반적인 html작성과 css, 웹디자인</h3>
 
   - 헤더, 풋터, 메인, 영화 탭 전체
@@ -86,7 +86,7 @@ Collaboration<br>
  - HTTPS 설정을 위한 ROUTE53 설정 - 참여자 : [ 김민수(팀장) GITHUB ](https://github.com/MSKY219)
  - 도메인 설정 - 참여자 : [ 김민수(팀장) GITHUB ](https://github.com/MSKY219)
 
-## 프로젝트 진행 중 어려웠던 상황
+## ✨ 프로젝트 진행 중 어려웠던 상황
 
 <h3> 1. XSS 데이터 출력 오류 </h3>
 프로젝트 마지막 날 XSS 설정으로 인하여 데이터들이 '<\br\>"이 포함되어 마구 출력되는것을 확인하였습니다.<br>
@@ -196,7 +196,7 @@ XSS가 적용이 안되길래 엄청난 시간을 투자해서 코드를 추가�
 		return null;
 ```
 
-## 프로젝트 진행 후기
+## ✨ 프로젝트 진행 후기
 
 모두가 한마음 한뜻으로 뭉치기는 정말 어렵다는걸 다시한번 느꼈습니다.
 밀어주고 끌어주고 격려하고 함께 으쌰으쌰 할 수 있도록 노력해야했었는데 그런 노력이 조금 부족했던 것 같아서 반성합니다..
