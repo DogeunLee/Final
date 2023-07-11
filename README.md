@@ -3,7 +3,7 @@
 
 <p align="center"><img src="/img/kgv2.png" /></p>
 
-## ✨ Team Channel KGV WEB
+## ✨ Team Channel_KGV WEB
   KH정보교육원 자바개발 A10 3조 Team Channel_KGV<br>
   조장 - [김민수](https://github.com/MSKY219), 팀원 - 이도근, [김윤석](https://github.com/rjrjsktl), [권지훈](https://github.com/last-child), [최영탁](https://github.com/cyoungt), [정지민](https://github.com/0sori)
   <br>개발기간 : 2023.05.15 ~ 2023.07.10
