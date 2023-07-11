@@ -74,35 +74,6 @@ Collaboration<br>
 
  - 주소표시줄에 강제값을 입력하여 접근 차단 기능 구현
  - 이벤트 핸들러를 이용한 세션, 잘못된접근 차단 기능 구현
-```
-  @ExceptionHandler(MissingRequestHeaderException.class)
-	    public ModelAndView handleMissingRequestHeaderException(MissingRequestHeaderException ex, HttpServletRequest request) {
-	        ModelAndView modelAndView = new ModelAndView();
-	        modelAndView.addObject("exception", ex);
-	        modelAndView.addObject("url", request.getRequestURL());
-	        modelAndView.setViewName("/helpDesk/error"); 
-	        return modelAndView;
-	    }
-	  
-	  @ExceptionHandler(NullPointerException.class)
-	  public ModelAndView handleNullPointerException(NullPointerException ex, HttpServletRequest request) {
-	      ModelAndView modelAndView = new ModelAndView();
-	      modelAndView.addObject("exception", ex);
-	      modelAndView.addObject("url", request.getRequestURL());
-	      modelAndView.setViewName("/helpDesk/error");  
-	      return modelAndView;
-	  }
-	  
-	  @ExceptionHandler(HttpSessionRequiredException.class)
-	    public ModelAndView handleHttpSessionRequiredException(HttpSessionRequiredException ex, HttpServletRequest request) {
-	        ModelAndView modelAndView = new ModelAndView();
-	        modelAndView.addObject("exception", ex);
-	        modelAndView.addObject("url", request.getRequestURL());
-	        modelAndView.setViewName("/helpDesk/error");  
-	        return modelAndView;
-	
-	  }
-```
 
 <h3>7. 네이버 XSS escapeXML 데이터 정제 </h3>
 
@@ -157,6 +128,72 @@ XSS가 적용이 안되길래 엄청난 시간을 투자해서 코드를 추가�
 
 ```
 <c:out value="${review.revContent}" escapeXml="true" />
+```
+
+<h4> 4. 강제 주소 접근</h4>
+주소표시줄에 강제로 주소를 유추해서 ( 게시글번호 ) 접근 시 비밀 상태의 글에도 접근이 가능한 것을 확인하였습니다.
+또한 없는 번호로 접근 시 에러가 나는 것을 발견하였고, 이것을 처리하기위하여 @service와 핸들러를 추가하였습니다.
+
+```
+  @ExceptionHandler(MissingRequestHeaderException.class)
+	    public ModelAndView handleMissingRequestHeaderException(MissingRequestHeaderException ex, HttpServletRequest request) {
+	        ModelAndView modelAndView = new ModelAndView();
+	        modelAndView.addObject("exception", ex);
+	        modelAndView.addObject("url", request.getRequestURL());
+	        modelAndView.setViewName("/helpDesk/error"); 
+	        return modelAndView;
+	    }
+	  
+	  @ExceptionHandler(NullPointerException.class)
+	  public ModelAndView handleNullPointerException(NullPointerException ex, HttpServletRequest request) {
+	      ModelAndView modelAndView = new ModelAndView();
+	      modelAndView.addObject("exception", ex);
+	      modelAndView.addObject("url", request.getRequestURL());
+	      modelAndView.setViewName("/helpDesk/error");  
+	      return modelAndView;
+	  }
+	  
+	  @ExceptionHandler(HttpSessionRequiredException.class)
+	    public ModelAndView handleHttpSessionRequiredException(HttpSessionRequiredException ex, HttpServletRequest request) {
+	        ModelAndView modelAndView = new ModelAndView();
+	        modelAndView.addObject("exception", ex);
+	        modelAndView.addObject("url", request.getRequestURL());
+	        modelAndView.setViewName("/helpDesk/error");  
+	        return modelAndView;
+	
+	  }
+```
+```
+	int userNo = 0;
+		String userManagerSt = null;
+
+		if(loginUser != null ) {
+			userNo = loginUser.getUserNo();
+			userManagerSt = loginUser.getUserManagerSt();
+		}
+		else {
+			userManagerSt = "N";
+		}
+
+		int lostPw = selectmtmLostPw(lostNo);
+		int lostUserNo = selectLostUserNo(lostNo);
+
+		if ( userNo == 0 && lostPw != 0 ) {
+			return "redirect:/user/login";
+		} 
+
+		if (userManagerSt.equals("Y") || lostPw == 0) {
+			return "redirect:/helpDesk/lost_detail/" + lostNo + "?cp=" + cp;
+		} 
+
+		if (userNo == lostUserNo ) {
+			return "redirect:/helpDesk/lost_detail/" + lostNo + "?cp=" + cp;
+		}
+
+		if (userManagerSt.equals("N") && userNo != 0) {
+			return "helpDesk/checkLostPw";
+		}
+		return null;
 ```
 
 ## 프로젝트 진행 후기
