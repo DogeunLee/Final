@@ -79,9 +79,9 @@ Collaboration<br>
 
  - XSS 기능으로 인한 텍스트 정제기능 구현
 
-<h3>8. AWS ec2, rds, route53 설정협업과 도메인 설정 </h3>
+<h3>8. AWS EC2, RDS, ROUTE53 설정협업과 도메인 설정 </h3>
 
- - 배포를 위한 ec2 설정 - 참여자 : [ 김민수(팀장) GITHUB ](https://github.com/MSKY219), [ 김윤석 GITHUB ](https://github.com/rjrjsktl)
+ - 배포를 위한 EC2 설정 - 참여자 : [ 김민수(팀장) GITHUB ](https://github.com/MSKY219), [ 김윤석 GITHUB ](https://github.com/rjrjsktl)
  - DB재설정을 위한 RDS 설정  - 참여자 : [ 김민수(팀장) GITHUB ](https://github.com/MSKY219), [ 김윤석 GITHUB ](https://github.com/rjrjsktl)
  - HTTPS 설정을 위한 ROUTE53 설정 - 참여자 : [ 김민수(팀장) GITHUB ](https://github.com/MSKY219)
  - 도메인 설정 - 참여자 : [ 김민수(팀장) GITHUB ](https://github.com/MSKY219)
